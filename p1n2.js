@@ -1,4 +1,4 @@
-var names = ["Lucas", "Matheus", "João", "Pedro", "Gabriel" ];
+var names = ["Ben", "Jafar", "Matthews", "Priya", "Brian"];
 
 var inverse = names.map((name) => {return name.split('').reverse().join('')});
 
