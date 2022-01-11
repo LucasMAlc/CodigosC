@@ -5,6 +5,11 @@ var filmes =
         {"id": 65432445,"title": "The Chamber","rating": [3.0]}
     ]; 
 
-var filmesRating4 = filmes.filter(x => x.rating >= 4.0);
 
-console.log(filmesRating4)
+var ratingFour = (filme) => filme.rating >= 4;
+var maiorQ = filmes.filter(ratingFour);
+console.log(maiorQ);
+
+var idTiltle = (filme) => filme.id +' '+ filme.title;
+var Nomes = filmes.filter(ratingFour).map(idTiltle);
+console.log(Nomes);
