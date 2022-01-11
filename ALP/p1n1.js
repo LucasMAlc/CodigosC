@@ -4,9 +4,6 @@ var media = (notas.reduce((n, prox) => n+prox))/notas.length;
 var aprovado = notas.filter(n => n >= 6.0);
 var msg = notas.map((n) => {if (n >= 6.0) return 'Aprovado'; else return 'Reprovado' });
 
-
-
-console.log(notas);
 console.log("a média foi: ", media);
 console.log("as notas aprovadas foram: ", aprovado);
 console.log(msg);
