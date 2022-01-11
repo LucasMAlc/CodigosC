@@ -1,17 +1,13 @@
 var names = ["Ben", "Jafar", "Matthews", "Priya", "Brian"];
-console.log(names);
 
 //letra a
 var inverse = names.map((name) => {return name.split('').reverse().join('')});
 console.log("O inverso: ", inverse);
 
 //letra b
-var nomeMaior = (acc, nomeTam) => {
-    if (acc < nomeTam) {
-        return nomeTam;
-      }
-    return acc;
-    };
-
-var maior = names.reduce(nomeMaior)
-console.log("O maior nome: ", maior);
+var longest = names.reduce(
+    function (n1, n2) {
+        return n1.length >= n2.length ? n1 : n2;
+    }
+);
+console.log("O maior nome: ", longest);
