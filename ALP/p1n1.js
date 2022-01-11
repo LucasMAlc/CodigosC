@@ -6,6 +6,7 @@ var msg = notas.map((n) => {if (n >= 6.0) return 'Aprovado'; else return 'Reprov
 
 media = media/11;
 
+console.log(notas);
 console.log("a média foi: ", media);
 console.log("as notas aprovadas foram: ", aprovado);
 console.log(msg);
