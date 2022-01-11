@@ -19,13 +19,10 @@ var maiorComodo = Object.assign({label: maiorM2.label, m2: maiorM2.largura*maior
 console.log(maiorComodo);
 
 //letra b
-var quartos = (c1, c2) => {
-    if (c1.label == 'quarto1' || 'quarto2' && c2.label == 'quarto1' || 'quarto2') {
-        l = (c1.largura+c2.largura) 
-        c =  (c2.comprimento+c1.comprimento);
-    }
-};
+var total = comodos.map((t) => t.largura*t.comprimento).reduce((a, b) => a + b);
+console.log("m2 total do apartamento: ", total);
 
-var quartosM2 = comodos.reduce(quartos);
-var somaQ = Object.assign({label: 'quartos', m2: quartos.l*quartos.c});
-console.log(somaQ);
+//letra c
+var isQuarto1 = comodos.filter((t) => t.label == 'quarto1').map((x) => x.largura*x.comprimento).reduce((a, b) => a + b);
+var isQuarto2 = comodos.filter((t) => t.label == 'quarto2').map((x) => x.largura*x.comprimento).reduce((a, b) => a + b);
+console.log("m2 total dos quartos: ", isQuarto1 + isQuarto2);
