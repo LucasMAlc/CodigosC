@@ -6,4 +6,5 @@ var filmes =
     ]; 
 
 var filmesRating4 = filmes.filter(x => x.rating >= 4.0);
+
 console.log(filmesRating4)
