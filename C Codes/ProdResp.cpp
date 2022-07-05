@@ -22,15 +22,15 @@ void cadastrar(vector<string> &produto, vector<string> &custo, vector<string> &f
     printf( "\n--Insira os dados--\n");
     for (int i = 0; i < 10; i++)
     {
-        printf( "Dados do produto no.%d :", i + 1 );
-        printf( "\ndigite o nome: ");
-        cin >> produto[i];
+        printf("Dados do produto no.%d :", i + 1 );
+        printf("\ndigite o nome: ");
+        scanf("%s", produto[i]);
         printf( "\nDigite o fornecedor");
-        cin >> fornecedor[i];
+        scanf("%s", fornecedor[i]);
         printf("\nPreco de custo: R$");
-        cin >> custo[i];
+        scanf("%s", custo[i]);
         printf("\nPreco de venda: R$");
-        cin >> venda[i];
+        scanf("%s", venda[i]);
         printf("\nProduto cadastrado \n\n");
     }
 }
@@ -38,7 +38,7 @@ void cadastrar(vector<string> &produto, vector<string> &custo, vector<string> &f
 int procurar(vector<string> &produto){ 
     string s;
     printf("\nDigite o nome do produto a ser procurado: ");
-    cin >> s; 
+    scanf("%s", s); 
     for (int i = 0; i < produto.size(); i++)
     {
         string temp = produto[i];
@@ -58,10 +58,10 @@ void consultar(vector<string> &produto, vector<string> &custo, vector<string> &f
     }
     else
     {
-        printf( "Nome do produto: %s", produto[itm] );
-        printf( "Nome do fornecedor: %s", fornecedor[itm] );
-        printf( "Preco de custo: %s", custo[itm] );
-        printf( "Preco de venda: %s", venda[itm] );
+        printf("Nome do produto: %s", produto[itm] );
+        printf("Nome do fornecedor: %s", fornecedor[itm] );
+        printf("Preco de custo: %s", custo[itm] );
+        printf("Preco de venda: %s", venda[itm] );
     }
 } 
 
@@ -75,30 +75,30 @@ void alterar(vector<string> &produto, vector<string> &custo, vector<string> &for
     }
     else
     {
-        printf( "\nNome do produto: %s", produto[itm] );
-        printf( "\nNome do fornecedor: %s", fornecedor[itm] );
-        printf( "\npreco de custo: %s", custo[itm] );
-        printf( "\npreco de venda: %s", venda[itm] );
-        printf( "\nDeseja alterar?(S/N): " );
-        cin >> opicao;
+        printf("\nNome do produto: %s", produto[itm] );
+        printf("\nNome do fornecedor: %s", fornecedor[itm] );
+        printf("\npreco de custo: %s", custo[itm] );
+        printf("\npreco de venda: %s", venda[itm] );
+        printf("\nDeseja alterar?(S/N): " );
+        scanf("%d", opicao);
         opicao = toupper(opicao);
     }
     if (opicao == 'S')
     {
-        printf( "Digite os novo dados \n");
-        printf( "Nome do produto: ");
-        cin >> produto[itm];
+        printf("Digite os novo dados \n");
+        printf("Nome do produto: ");
+        scanf("%s", produto[itm]);
         printf( "\nDigite o nome do fornecedor: ");
-        cin >> fornecedor[itm];
+        scanf("%s", fornecedor[itm]);
         printf( "\nDigite o preco de custo: ");
-        cin >> custo[itm];
+        scanf("%s", custo[itm]);
         printf( "\nDigite o preco de venda: ");
-        cin >> venda[itm];
+        scanf("%s", venda[itm]);
         printf("\nProduto cadastrado");
     }
     else
     {
-        printf( "Cadastro não alterado" );
+        printf("Cadastro não alterado" );
     }
 }
 
@@ -115,7 +115,7 @@ void remover(vector<string> &produto, vector<string> &custo, vector<string> &for
         custo[itm] = "";
         fornecedor[itm] = "";
         venda[itm] = "";
-        printf( "Produto removido\n" );
+        printf("Produto removido\n" );
 
     }
 
@@ -127,10 +127,10 @@ void listar(vector<string> &produto, vector<string> &custo, vector<string> &forn
 
         if (produto[i] != ""){
 
-            printf( "\nNome do produto: %s", produto[i]);
-            printf( "\nNome do fornecedor: %s", fornecedor[i]);
-            printf( "\nPreco de custo: %d", custo[i]);
-            printf( "\npreco de venda: %d", venda[i]);
+            printf("\nNome do produto: %s", produto[i]);
+            printf("\nNome do fornecedor: %s", fornecedor[i]);
+            printf("\nPreco de custo: %d", custo[i]);
+            printf("\npreco de venda: %d", venda[i]);
 
         }
 
@@ -149,7 +149,7 @@ int main(){
 
     do{
         printMenu();
-        cin >> opicao;
+        scanf("%d", opicao);
         switch (opicao){
         case 1:
             cadastrar(produto, fornecedor, custo, venda);
