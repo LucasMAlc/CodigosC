@@ -1,2 +1,1 @@
-# Codigos
- Códigos de diversas disciplinas e em diversas linguagens
+Exercícios de treinamento/educativos em C, C++ ou C# 

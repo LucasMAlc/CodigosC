@@ -1,1 +1,0 @@
-Exercícios de treinamento/educativos em C, C++ ou C# 
